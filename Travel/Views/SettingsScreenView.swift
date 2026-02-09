@@ -1,0 +1,30 @@
+//
+//  SettingsScreenView.swift
+//  Travel
+//
+//  Created by Данила Спиридонов on 05.02.2026.
+//
+
+import SwiftUI
+
+struct SettingsScreenView: View {
+    var body: some View {
+        VStack {
+            
+            Spacer()
+            
+            Text("Настройки")
+                .font(.system(size: 24, weight: .bold))
+                .foregroundColor(Color(.blackDayYP))
+            
+            Spacer()
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.whiteDayYP))
+    }
+}
+
+#Preview {
+    SettingsScreenView()
+}
