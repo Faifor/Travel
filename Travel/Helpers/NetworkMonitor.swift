@@ -41,7 +41,9 @@ final class NetworkMonitor: ObservableObject {
         probeWorkItem?.cancel()
         let work = DispatchWorkItem { [weak self] in
             guard let self = self else { return }
-            let url = URL(string: "https://clients3.google.com/generate_204")!
+            guard let url = URL(string: "https://clients3.google.com/generate_204") else {
+                return
+            }
             let config = URLSessionConfiguration.ephemeral
             config.timeoutIntervalForRequest = 2
             config.timeoutIntervalForResource = 3
