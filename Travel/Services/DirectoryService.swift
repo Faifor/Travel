@@ -141,17 +141,12 @@ final class DirectoryService {
         guard var components = URLComponents(string: "https://api.rasp.yandex.net/v3.0/stations_list/") else {
             throw URLError(.badURL)
         }
-
         components.queryItems = [
             URLQueryItem(name: "apikey", value: apikey),
             URLQueryItem(name: "format", value: "json"),
             URLQueryItem(name: "lang", value: "ru_RU")
         ]
-
-        guard let url = components.url else {
-            throw URLError(.badURL)
-        }
-
+        guard let url = components.url else { throw URLError(.badURL) }
         return url
     }
 
