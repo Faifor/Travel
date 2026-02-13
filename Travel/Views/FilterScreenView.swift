@@ -174,3 +174,4 @@ struct TransferOptionRow: View {
         onApply: { _ in }
     )
 }
+

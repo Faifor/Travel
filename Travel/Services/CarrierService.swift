@@ -24,7 +24,7 @@ protocol CarrierServiceProtocol {
 final class CarrierService: CarrierServiceProtocol {
     private let client: Client
     
-    init(client: Client) {
+    nonisolated init(client: Client) {
         self.client = client
     }
     

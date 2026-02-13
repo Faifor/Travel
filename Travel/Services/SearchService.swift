@@ -30,7 +30,7 @@ protocol SearchServiceProtocol {
 final class SearchService: SearchServiceProtocol {
     private let client: Client
     
-    init(client: Client) {
+    nonisolated init(client: Client) {
         self.client = client
     }
     
